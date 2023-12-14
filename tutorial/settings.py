@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    'django_crontab',
     'rest_framework',
     'birthday_reminder.apps.BirthdayReminderConfig',
     'send_whapp_message.apps.SendWhappMessageConfig',
@@ -101,6 +102,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CRONJOBS = [
+    ('1 * * * *', 'birthday_reminder.tasks.send_birthday_reminder')
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -126,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MESSAGE = 'salut. Acest mesaj a fost trimis automat de catre Radu. \n'
+
+ACCCOUNT_SID = ''
+AUTH_TOKEN = ''
+
+PHONE_NUMBERS= ''
