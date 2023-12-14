@@ -5,7 +5,7 @@ class Group(models.Model):
     name = models.CharField(max_length=250)
 
     def __str__(self) -> str:
-        return f"{self.name}"
+        return f'{self.name}'
 
 class Contact(models.Model):
     full_name = models.CharField(max_length=250)
@@ -15,4 +15,4 @@ class Contact(models.Model):
     active = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.full_name} - {self.nickname}"
+        return f'{self.full_name} - {self.nickname}'

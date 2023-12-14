@@ -1,4 +1,4 @@
-"""
+'''
 URL configuration for tutorial project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,12 +13,18 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+'''
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework import routers
+from birthday_reminder.views import ContactViewSet
+
+router = routers.DefaultRouter()
+router.register(r"contacts",ContactViewSet,basename='contacts')
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('message/', include('send_whapp_message.urls')),
-    path('birthday_reminder/', include('birthday_reminder.urls'))
+    path('api/v1/',include(router.urls)),
+    path('api/v1/admin/', admin.site.urls),
+    path('api/v1/message/', include('send_whapp_message.urls')),
+    path('api/v1/birthday_reminder/', include('birthday_reminder.urls'))
 ]
