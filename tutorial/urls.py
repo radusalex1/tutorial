@@ -22,6 +22,8 @@ from birthday_reminder.views import ContactViewSet
 router = routers.DefaultRouter()
 router.register(r"contacts",ContactViewSet,basename='contacts')
 
+
+
 urlpatterns = [
     path('api/v1/',include(router.urls)),
     path('api/v1/admin/', admin.site.urls),
