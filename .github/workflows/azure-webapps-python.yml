@@ -20,7 +20,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: django-tutorial  # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: djangotutorial2  # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.11.6'              # set this to the Python version to use
 
 on:
@@ -46,7 +46,7 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m venv venv
+          python3 -m venv venv
           source venv/bin/activate
 
       - name: Install dependencies
@@ -82,5 +82,5 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ djangotutorial2 }}
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE}}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
