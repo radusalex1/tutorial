@@ -1,7 +1,6 @@
 import datetime
 from django.conf import settings
 from django.http import HttpResponse
-import pywhatkit as kit
 from twilio.rest import Client
 from mailersend import sms_sending
 from birthday_reminder.models import Contact

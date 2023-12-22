@@ -40,7 +40,6 @@ PyScreeze==0.1.30
 python-dateutil==2.8.2
 pytweening==1.0.7
 pytz==2023.3.post1
-pywhatkit==5.4
 requests==2.31.0
 rubicon-objc==0.4.7
 six==1.16.0
