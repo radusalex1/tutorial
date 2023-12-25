@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.core import serializers
 
-from birthday_reminder.serializers import ContactSerializer
+from birthday_reminder.serializers import ContactSerializer, GroupSerializer
 from .models import *
 import datetime
 
@@ -23,3 +23,7 @@ def birthday_reminder(request):
 class ContactViewSet(viewsets.ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+
+class GroupViewSet(viewsets.ModelViewSet):
+    queryset=Group.objects.all()
+    serializer_class = GroupSerializer

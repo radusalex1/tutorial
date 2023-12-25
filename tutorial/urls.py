@@ -17,11 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from birthday_reminder.views import ContactViewSet
+from birthday_reminder.views import ContactViewSet, GroupViewSet
 
 router = routers.DefaultRouter()
 router.register(r"contacts",ContactViewSet,basename='contacts')
-
+router.register(r"groups",GroupViewSet,basename='groups')
 
 
 urlpatterns = [
