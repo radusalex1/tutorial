@@ -37,9 +37,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: dispplay db url
-        run: echo ${{secrets.DATABASE_URL}}
-
       - uses: actions/checkout@v3
 
       - name: Set up Python version
