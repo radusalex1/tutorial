@@ -20,8 +20,9 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: djangotutorial2  # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: djangotutorial2    # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.11.6'              # set this to the Python version to use
+  DATABASE_URL: ${{vars.DATABASE_URL}}
 
 on:
   push:
@@ -54,6 +55,9 @@ jobs:
       
       - name: install python-xlib
         run: pip install python-xlib
+      
+      - name: apply migrations
+        run: python3 manage.py migrate
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 

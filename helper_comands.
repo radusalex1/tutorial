@@ -1,1 +1,3 @@
 python -m pip freeze > requirements.txt
+
+con string local: postgresql://postgres:postgres@localhost:5432/django-tutorial
