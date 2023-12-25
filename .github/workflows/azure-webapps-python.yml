@@ -22,7 +22,7 @@ name: Build and deploy Python app to Azure Web App
 env:
   AZURE_WEBAPP_NAME: djangotutorial2    # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.11.6'              # set this to the Python version to use
-  DATABASE_URL: ${{secrets.DATABASE_URL}}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 on:
   push:
@@ -55,9 +55,6 @@ jobs:
       
       - name: install python-xlib
         run: pip install python-xlib
-      
-      - name: Display DATABASE_URL
-        run: echo "${{ env.DATABASE_URL }}"
 
       - name: apply migrations
         run: python3 manage.py migrate
