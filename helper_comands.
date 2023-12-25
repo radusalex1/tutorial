@@ -1,3 +1,4 @@
 python -m pip freeze > requirements.txt
 
 con string local: postgresql://postgres:postgres@localhost:5432/django-tutorial
+con string azure: postgresql://postgres:<password>@djangotutorial-db.postgres.database.azure.com:5432/postgres
