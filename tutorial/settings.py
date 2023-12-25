@@ -133,4 +133,4 @@ MESSAGE = 'salut. Acest mesaj a fost trimis automat de catre Radu. \n'
 ACCCOUNT_SID = ''
 AUTH_TOKEN = ''
 
-PHONE_NUMBERS= ''
+PHONE_NUMBERS= '0735125928'
