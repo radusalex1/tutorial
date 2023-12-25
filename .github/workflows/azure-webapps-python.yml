@@ -38,8 +38,8 @@ jobs:
 
     steps:
       - name: dispplay db url
-        uses: echo ${{vars.DATABASE_URL}}
-        
+        run: echo ${{vars.DATABASE_URL}}
+
       - uses: actions/checkout@v3
 
       - name: Set up Python version
