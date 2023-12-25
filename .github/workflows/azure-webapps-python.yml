@@ -56,6 +56,9 @@ jobs:
       - name: install python-xlib
         run: pip install python-xlib
       
+      - name: Display DATABASE_URL
+        run: echo "DATABASE_URL: ${{ env.DATABASE_URL }}"
+        
       - name: apply migrations
         run: python3 manage.py migrate
 
