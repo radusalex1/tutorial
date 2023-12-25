@@ -22,7 +22,7 @@ name: Build and deploy Python app to Azure Web App
 env:
   AZURE_WEBAPP_NAME: djangotutorial2    # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.11.6'              # set this to the Python version to use
-  DATABASE_URL: ${{vars.DATABASE_URL}}
+  DATABASE_URL: ${{secrets.DATABASE_URL}}
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: dispplay db url
-        run: echo ${{vars.DATABASE_URL}}
+        run: echo ${{secrets.DATABASE_URL}}
 
       - uses: actions/checkout@v3
 
