@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['djangotutorial2.azurewebsites.net','localhost']
 
 # Application definition
 INSTALLED_APPS = [
+    'corsheaders',
     'django_crontab',
     'rest_framework',
     'birthday_reminder.apps.BirthdayReminderConfig',
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
