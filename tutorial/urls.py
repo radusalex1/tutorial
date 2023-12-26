@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from birthday_reminder.views import ContactViewSet, GroupViewSet
+from tutorial import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r"contacts",ContactViewSet,basename='contacts')
@@ -30,3 +32,7 @@ urlpatterns = [
     path('api/v1/message/', include('send_whapp_message.urls')),
     path('api/v1/birthday_reminder/', include('birthday_reminder.urls'))
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
