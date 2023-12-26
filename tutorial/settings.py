@@ -130,6 +130,11 @@ STATIC_ROOT = "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_REPLACE_HTTPS_REFERER = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = ("https://djangotutorial2.azurewebsites.net")
+CSRF_TRUSTED_ORIGINS = ["https://djangotutorial2.azurewebsites.net"]
 
 MESSAGE = 'salut. Acest mesaj a fost trimis automat de catre Radu. \n'
 
