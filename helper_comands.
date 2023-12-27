@@ -4,3 +4,5 @@ conn string local: postgresql://postgres:postgres@localhost:5432/django-tutorial
 conn string azure: postgresql://postgres:<password>@djangotutorial-db.postgres.database.azure.com:5432/postgres
 
 de configurat con string in azure-> web application->aplication settings.
+
+url must end with trailing /
