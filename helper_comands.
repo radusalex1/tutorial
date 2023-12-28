@@ -4,5 +4,8 @@ conn string local: postgresql://postgres:postgres@localhost:5432/django-tutorial
 conn string azure: postgresql://postgres:<password>@djangotutorial-db.postgres.database.azure.com:5432/postgres
 
 de configurat con string in azure-> web application->aplication settings.
+de configurat: webapp->configuration->generallsettings: SCM_DO_BUILD_DURING_DEPLOYMENT = True, WEBSITE_HTTPLOGGING_RETENTION_DAYS=3
+
 
 url must end with trailing /
+
